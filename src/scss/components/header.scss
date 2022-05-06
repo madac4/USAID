@@ -1,0 +1,106 @@
+.header {
+    padding: 20px 0;
+    background-color: #000;
+    &__container {
+        justify-content: space-between;
+        @media (max-width: $mobile) {
+            gap: 20px;
+        }
+    }
+    &__logo {
+        @media (max-width: $mobile) {
+            flex: 1;
+        }
+        img {
+            @include adaptiv-value('width', 115, 20, 1);
+            height: auto;
+            @media (max-width: $mobile) {
+                width: 70px;
+            }
+        }
+    }
+    &-nav {
+        @media (max-width: $mobile) {
+            position: fixed;
+            right: -60%;
+            bottom: 0;
+            width: 60%;
+            height: 100%;
+            background-color: #fff;
+            padding: 30px 0 0 30px;
+            transition: 0.3s;
+            box-shadow: 0px 4px 30px rgba(65, 65, 65, 0.15);
+
+            &.active {
+                right: 0;
+            }
+        }
+        &__list {
+            display: flex;
+            align-items: center;
+            @include adaptiv-value('gap', 50, 0, 1);
+            @media (max-width: $mobile) {
+                gap: 30px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            li {
+                &.active {
+                    a {
+                        font-weight: 700;
+                    }
+                }
+                a {
+                    font-size: 14px;
+                    color: #fff;
+                    transition: 0.3s;
+                    @media (max-width: $mobile) {
+                        color: $maincolor;
+                        font-size: 18px;
+                    }
+                    &:hover {
+                        color: $accentcolor;
+                    }
+                }
+            }
+        }
+    }
+
+    &-languages {
+        &__current {
+            gap: 5px;
+            align-items: center;
+            cursor: pointer;
+            span {
+                display: block;
+                color: #fff;
+                &.icon-language {
+                    font-size: 20px;
+                }
+                &.language-code {
+                    font-size: 14px;
+                    transform: translateY(2px);
+                }
+            }
+        }
+    }
+
+    // &.sticky {
+    //     position: fixed;
+    //     width: 100%;
+    //     left: 0;
+    //     top: 0;
+    //     right: 0;
+    //     animation: fixedHeader 0.4s;
+    //     z-index: 5;
+    // }
+}
+
+// @keyframes fixedHeader {
+//     from {
+//         transform: translateY(-50px);
+//     }
+//     to {
+//         transform: translateY(0);
+//     }
+// }

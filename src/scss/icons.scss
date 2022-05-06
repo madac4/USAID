@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?aef8go');
+    src: url('../fonts/icomoon.woff') format('woff'), url('../fonts/icomoon.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-back:before {
+    content: '\e902';
+}
+.icon-chevron__down:before {
+    content: '\e903';
+}
+.icon-chevron__up:before {
+    content: '\e903';
+    transform: rotate(180deg);
+    display: inline-block;
+}
+.icon-chevron__left:before {
+    content: '\e903';
+    transform: rotate(90deg);
+    display: inline-block;
+}
+.icon-chevron__right:before {
+    content: '\e903';
+    transform: rotate(-90deg);
+    display: inline-block;
+}
+
+.icon-language:before {
+    content: '\e904';
+}
+.icon-long__arrow:before {
+    content: '\e905';
+}
+
+.icon-slider__arrow {
+    background-color: #000;
+    @include adaptiv-value('width', 60, 40, 1);
+    @include adaptiv-value('height', 60, 40, 1);
+    position: relative;
+    border-radius: 50%;
+    transition: 0.3s;
+    &:hover {
+        background-color: lighten($color: #000000, $amount: 10);
+    }
+    &:active {
+        background-color: lighten($color: #000000, $amount: 15);
+    }
+    &.next {
+        transform: rotate(0);
+    }
+    &.prev {
+        transform: rotate(180deg);
+    }
+    &.accent {
+        background-color: #3f7aca;
+        &:hover {
+            background-color: darken($color: #3f7aca, $amount: 5);
+        }
+        &:active {
+            background-color: darken($color: #3f7aca, $amount: 10);
+        }
+    }
+    &::before {
+        content: '\e903';
+        transform: rotate(-90deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: #fff;
+        font-size: 24px;
+    }
+}

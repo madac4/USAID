@@ -1,0 +1,322 @@
+h1 {
+    @include adaptiv-value('font-size', 36, 28, 1);
+    line-height: 150%;
+    text-transform: uppercase;
+    span {
+        color: $maincolor;
+    }
+}
+h2 {
+    @include adaptiv-value('font-size', 32, 24, 1);
+    line-height: 150%;
+    text-transform: uppercase;
+}
+h3 {
+    @include adaptiv-value('font-size', 24, 20, 1);
+    line-height: 140%;
+}
+h4 {
+    @include adaptiv-value('font-size', 20, 18, 1);
+    line-height: 140%;
+}
+h5 {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+p {
+    &.big {
+        font-size: 24px;
+        line-height: 150%;
+    }
+}
+
+.with-dot {
+    position: relative;
+    @include adaptiv-value('padding-left', 28, 24, 1);
+    &::after {
+        content: '';
+        position: absolute;
+        @include adaptiv-value('width', 18, 14, 1);
+        @include adaptiv-value('height', 18, 14, 1);
+        border-radius: 50%;
+        background-color: $accentcolor;
+        left: 0;
+        top: 50%;
+        transform: translateY(-65%);
+    }
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-gray {
+    color: $disabled;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    font-weight: 500;
+    transition: 0.3s;
+    &__light {
+        background-color: #fff;
+        width: 100%;
+        &:hover {
+            background-color: darken($color: #fff, $amount: 8);
+        }
+        &:active {
+            background-color: darken($color: #fff, $amount: 12);
+        }
+    }
+    &__dark {
+        background-color: #000;
+        color: #fff;
+        width: 100%;
+        max-width: 180px;
+        &:hover {
+            background-color: lighten($color: #000, $amount: 8);
+        }
+        &:active {
+            background-color: lighten($color: #000, $amount: 12);
+        }
+    }
+    &__filter {
+        padding: 10px 15px;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4px);
+        border-radius: 4px;
+        font-weight: 400;
+        &:hover {
+            border-color: $bluecolor200;
+        }
+        &--active {
+            background-color: #d3e6ff;
+            border-color: #d3e6ff;
+        }
+        &--outline {
+            background-color: $graycolor;
+            &.active {
+                color: $bluecolor200;
+                border-color: $bluecolor200;
+            }
+        }
+    }
+    &__navigation {
+        padding: 15px 30px;
+        background-color: $lightcolor200;
+        &:hover {
+            span {
+                transform: translateX(-5px);
+            }
+        }
+        &:active {
+            background-color: darken($lightcolor200, 5);
+        }
+        span {
+            transition: 0.3s;
+            font-size: 24px;
+        }
+    }
+    &__outline {
+        padding: 18px 40px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        &:hover {
+            border-color: rgba(0, 0, 0, 0.4);
+        }
+    }
+    &.disabled {
+        opacity: 0.4;
+        pointer-events: none;
+        cursor: not-allowed;
+        user-select: none;
+    }
+}
+
+.category-label {
+    background: $lightcolor200;
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    font-size: 14px;
+    &.glass {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.3);
+    }
+}
+
+.burger {
+    display: none;
+    @media (max-width: $mobile) {
+        display: block;
+        margin-left: auto;
+        position: relative;
+        width: 24px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 5;
+        span,
+        &::before,
+        &::after {
+            content: '';
+            transition: all 0.3s ease 0s;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        &::before {
+            top: 2px;
+        }
+        &::after {
+            bottom: 2px;
+        }
+        span {
+            top: calc(50% - 1px);
+        }
+        &.active {
+            span {
+                transform: scale(0);
+            }
+            &::before {
+                transform: rotate(-45deg);
+                top: calc(50% - 1px);
+            }
+            &::after {
+                transform: rotate(45deg);
+                top: calc(50% - 1px);
+            }
+        }
+    }
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.col-1 {
+    grid-column: 1 span;
+}
+.col-2 {
+    grid-column: 2 span;
+}
+.col-3 {
+    grid-column: 3 span;
+}
+.col-4 {
+    grid-column: 4 span;
+}
+.col-5 {
+    grid-column: 5 span;
+}
+.col-6 {
+    grid-column: 6 span;
+}
+.col-7 {
+    grid-column: 7 span;
+}
+.col-8 {
+    grid-column: 8 span;
+}
+.col-9 {
+    grid-column: 9 span;
+}
+.col-10 {
+    grid-column: 10 span;
+}
+.col-11 {
+    grid-column: 11 span;
+}
+.col-12 {
+    grid-column: 12 span;
+}
+
+.grid-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.gap-1 {
+    grid-gap: 10px;
+}
+.gap-2 {
+    grid-gap: 20px;
+}
+.gap-3 {
+    @include adaptiv-value('grid-gap', 30, 20, 1);
+}
+.gap-4 {
+    @include adaptiv-value('grid-gap', 40, 20, 1);
+}
+.gap-5 {
+    @include adaptiv-value('grid-gap', 50, 24, 1);
+}
+
+.flex-gap-1 {
+    gap: 10px;
+}
+.flex-gap-2 {
+    gap: 20px;
+}
+.flex-gap-3 {
+    @include adaptiv-value('gap', 30, 20, 1);
+}
+.flex-gap-4 {
+    @include adaptiv-value('gap', 40, 20, 1);
+}
+.flex-gap-5 {
+    @include adaptiv-value('gap', 50, 24, 1);
+}
+
+.align-center {
+    align-items: center;
+}

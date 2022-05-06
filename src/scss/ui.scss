@@ -26,9 +26,13 @@ h5 {
 
 p {
     &.big {
-        font-size: 24px;
-        line-height: 150%;
+        @include adaptiv-value('font-size', 24, 18, 1);
+        line-height: 140%;
     }
+}
+
+section {
+    @include adaptiv-value('margin-bottom', 100, 50, 1);
 }
 
 .with-dot {

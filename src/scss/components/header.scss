@@ -85,22 +85,22 @@
         }
     }
 
-    // &.sticky {
-    //     position: fixed;
-    //     width: 100%;
-    //     left: 0;
-    //     top: 0;
-    //     right: 0;
-    //     animation: fixedHeader 0.4s;
-    //     z-index: 5;
-    // }
+    &.sticky {
+        position: sticky;
+        width: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        animation: fixedHeader 0.4s;
+        z-index: 5;
+    }
 }
 
-// @keyframes fixedHeader {
-//     from {
-//         transform: translateY(-50px);
-//     }
-//     to {
-//         transform: translateY(0);
-//     }
-// }
+@keyframes fixedHeader {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

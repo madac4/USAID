@@ -1,0 +1,42 @@
+.footer {
+    background-color: #f6f6f6;
+    padding: 30px 0;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+    }
+    &__disclaimer {
+        max-width: 595px;
+        font-size: 14px;
+        width: 100%;
+    }
+    &__logos {
+        img {
+            @media (max-width: $mobileSmall) {
+                width: 100%;
+            }
+        }
+    }
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        a {
+            transition: 0.3s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

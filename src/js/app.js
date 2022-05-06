@@ -7,4 +7,5 @@ document.addEventListener('DOMContentLoaded', () =>{
     const header = document.querySelector('.header');
     const menu = document.querySelector('.header-nav');
     flsFunctions.burger(burger, menu, header)
+    flsFunctions.fixedHeader(header)
 })

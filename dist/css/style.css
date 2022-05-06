@@ -89,14 +89,18 @@
   border-radius: 50%;
   transition: 0.3s;
 }
-@media (max-width: 1110px) {
+@media (max-width: 1420px) {
   .icon-slider__arrow {
-    width: calc( 40px + 20 * ((100vw - 320px) / 790));
+    width: calc(
+                40px + 20 * ((100vw - 320px) / 1100)
+            );
   }
 }
-@media (max-width: 1110px) {
+@media (max-width: 1420px) {
   .icon-slider__arrow {
-    height: calc( 40px + 20 * ((100vw - 320px) / 790));
+    height: calc(
+                40px + 20 * ((100vw - 320px) / 1100)
+            );
   }
 }
 .icon-slider__arrow:hover {
@@ -258,7 +262,9 @@ h1 {
 }
 @media (max-width: 1420px) {
   h1 {
-    font-size: calc( 28px + 8 * ((100vw - 320px) / 1100));
+    font-size: calc(
+                28px + 8 * ((100vw - 320px) / 1100)
+            );
   }
 }
 h1 span {
@@ -272,7 +278,9 @@ h2 {
 }
 @media (max-width: 1420px) {
   h2 {
-    font-size: calc( 24px + 8 * ((100vw - 320px) / 1100));
+    font-size: calc(
+                24px + 8 * ((100vw - 320px) / 1100)
+            );
   }
 }
 
@@ -282,7 +290,9 @@ h3 {
 }
 @media (max-width: 1420px) {
   h3 {
-    font-size: calc( 20px + 4 * ((100vw - 320px) / 1100));
+    font-size: calc(
+                20px + 4 * ((100vw - 320px) / 1100)
+            );
   }
 }
 
@@ -292,7 +302,9 @@ h4 {
 }
 @media (max-width: 1420px) {
   h4 {
-    font-size: calc( 18px + 2 * ((100vw - 320px) / 1100));
+    font-size: calc(
+                18px + 2 * ((100vw - 320px) / 1100)
+            );
   }
 }
 
@@ -303,7 +315,25 @@ h5 {
 
 p.big {
   font-size: 24px;
-  line-height: 150%;
+  line-height: 140%;
+}
+@media (max-width: 1420px) {
+  p.big {
+    font-size: calc(
+                18px + 6 * ((100vw - 320px) / 1100)
+            );
+  }
+}
+
+section {
+  margin-bottom: 100px;
+}
+@media (max-width: 1420px) {
+  section {
+    margin-bottom: calc(
+                50px + 50 * ((100vw - 320px) / 1100)
+            );
+  }
 }
 
 .with-dot {
@@ -312,7 +342,9 @@ p.big {
 }
 @media (max-width: 1420px) {
   .with-dot {
-    padding-left: calc( 24px + 4 * ((100vw - 320px) / 1100));
+    padding-left: calc(
+                24px + 4 * ((100vw - 320px) / 1100)
+            );
   }
 }
 .with-dot::after {
@@ -328,12 +360,16 @@ p.big {
 }
 @media (max-width: 1420px) {
   .with-dot::after {
-    width: calc( 14px + 4 * ((100vw - 320px) / 1100));
+    width: calc(
+                14px + 4 * ((100vw - 320px) / 1100)
+            );
   }
 }
 @media (max-width: 1420px) {
   .with-dot::after {
-    height: calc( 14px + 4 * ((100vw - 320px) / 1100));
+    height: calc(
+                14px + 4 * ((100vw - 320px) / 1100)
+            );
   }
 }
 
@@ -597,7 +633,9 @@ p.big {
 }
 @media (max-width: 1420px) {
   .gap-3 {
-    grid-gap: calc( 20px + 10 * ((100vw - 320px) / 1100));
+    grid-gap: calc(
+                20px + 10 * ((100vw - 320px) / 1100)
+            );
   }
 }
 
@@ -606,7 +644,9 @@ p.big {
 }
 @media (max-width: 1420px) {
   .gap-4 {
-    grid-gap: calc( 20px + 20 * ((100vw - 320px) / 1100));
+    grid-gap: calc(
+                20px + 20 * ((100vw - 320px) / 1100)
+            );
   }
 }
 
@@ -615,7 +655,9 @@ p.big {
 }
 @media (max-width: 1420px) {
   .gap-5 {
-    grid-gap: calc( 24px + 26 * ((100vw - 320px) / 1100));
+    grid-gap: calc(
+                24px + 26 * ((100vw - 320px) / 1100)
+            );
   }
 }
 
@@ -632,7 +674,9 @@ p.big {
 }
 @media (max-width: 1420px) {
   .flex-gap-3 {
-    gap: calc( 20px + 10 * ((100vw - 320px) / 1100));
+    gap: calc(
+                20px + 10 * ((100vw - 320px) / 1100)
+            );
   }
 }
 
@@ -641,7 +685,9 @@ p.big {
 }
 @media (max-width: 1420px) {
   .flex-gap-4 {
-    gap: calc( 20px + 20 * ((100vw - 320px) / 1100));
+    gap: calc(
+                20px + 20 * ((100vw - 320px) / 1100)
+            );
   }
 }
 
@@ -650,12 +696,57 @@ p.big {
 }
 @media (max-width: 1420px) {
   .flex-gap-5 {
-    gap: calc( 24px + 26 * ((100vw - 320px) / 1100));
+    gap: calc(
+                24px + 26 * ((100vw - 320px) / 1100)
+            );
   }
 }
 
 .align-center {
   align-items: center;
+}
+
+.footer {
+  background-color: #f6f6f6;
+  padding: 30px 0;
+}
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 47.99875rem) {
+  .footer__container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+}
+.footer__disclaimer {
+  max-width: 595px;
+  font-size: 14px;
+  width: 100%;
+}
+@media (max-width: 29.99875rem) {
+  .footer__logos img {
+    width: 100%;
+  }
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer__socials a {
+  transition: 0.3s;
+}
+.footer__socials a:hover {
+  transform: scale(1.1);
+}
+.footer__socials img {
+  width: 32px;
+  height: 32px;
 }
 
 .header {
@@ -681,7 +772,9 @@ p.big {
 }
 @media (max-width: 1420px) {
   .header__logo img {
-    width: calc( 20px + 95 * ((100vw - 320px) / 1100));
+    width: calc(
+                20px + 95 * ((100vw - 320px) / 1100)
+            );
   }
 }
 @media (max-width: 47.99875rem) {
@@ -712,7 +805,9 @@ p.big {
 }
 @media (max-width: 1420px) {
   .header-nav__list {
-    gap: calc( 0px + 50 * ((100vw - 320px) / 1100));
+    gap: calc(
+                0px + 50 * ((100vw - 320px) / 1100)
+            );
   }
 }
 @media (max-width: 47.99875rem) {
@@ -754,4 +849,49 @@ p.big {
 .header-languages__current span.language-code {
   font-size: 14px;
   transform: translateY(2px);
+}
+.header.sticky {
+  position: sticky;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  animation: fixedHeader 0.4s;
+  z-index: 5;
+}
+
+@keyframes fixedHeader {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.hero-section__body {
+  max-width: 843px;
+  padding: 40px 0;
+  height: 870px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 1420px) {
+  .hero-section__body {
+    height: calc(
+                640px + 230 * ((100vw - 320px) / 1100)
+            );
+  }
+}
+.hero-section__body h1 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.hero-section__body p {
+  color: #fff;
+  margin-bottom: 30px;
+}
+.hero-section__body a {
+  max-width: 180px;
 }

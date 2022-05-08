@@ -1,5 +1,6 @@
 .register {
-    margin-bottom: 100px;
+    @include adaptiv-value('margin-bottom', 100, 60, 1);
+    @include adaptiv-value('margin-top', 100, 60, 1);
     &__body {
         @include adaptiv-value('height', 300, 220, 1);
         width: 100%;

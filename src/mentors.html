@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./components/head.html', {'title': 'Ecommerce'})
+
+<body>
+    @@include('./components/header.html')
+    @@include('./components/checkbox.html')
+    <main>
+        <section class="page-title with-sort">
+            <h2 class="with-dot">mentorii noștri</h2>
+            <p>Aliquam unde est. Corrupti occaecati ut ut vitae non maiores. Dignissimos vel corporis modi. Ea non qui ea omnis commodi nesciunt et et corrupti. Harum quia dolor ducimus facere minus voluptatem doloribus.</p>
+
+            <div class="page-title__sort sort">
+                <a href="#" class="button button__filter button__filter--outline">Speaking</a>
+                <a href="#" class="button button__filter button__filter--outline active">Aut perferendis sed</a>
+                <a href="#" class="button button__filter button__filter--outline">Teaching</a>
+                <a href="#" class="button button__filter button__filter--outline">Esse</a>
+                <a href="#" class="button button__filter button__filter--outline">Inventore</a>
+                <a href="#" class="button button__filter button__filter--outline">Odit ut aut</a>
+                <a href="#" class="button button__filter button__filter--outline">Magni</a>
+            </div>
+        </section>
+
+        @@include('./components/banner.html')
+    </main>
+    @@include('./components/footer.html')
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

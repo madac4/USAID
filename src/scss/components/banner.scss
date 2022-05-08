@@ -1,0 +1,28 @@
+.register {
+    margin-bottom: 100px;
+    &__body {
+        @include adaptiv-value('height', 300, 220, 1);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        @include adaptiv-value('padding', 60, 20, 1);
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+        }
+        h2 {
+            color: #fff;
+            flex: 1;
+            text-align: center;
+            transform: translateX(120px);
+            @media (max-width: $tablet) {
+                flex: 0;
+                transform: translateX(0);
+            }
+        }
+        a {
+            max-width: 240px;
+        }
+    }
+}

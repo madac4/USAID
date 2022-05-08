@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Ecommerce</title>
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
@@ -10,17 +14,17 @@
 <body>
     <header class="header">
     <div class="header__container flex align-center">
-        <a class="header__logo">
+        <a href="/" class="header__logo">
             <img src="img/logos/logo.svg" alt="logo">
         </a>
         
         <nav class="header__nav header-nav">
             <ul class="header-nav__list">
                 <li class="active">
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="#">Mentori</a>
+                    <a href="../mentors.html">Mentori</a>
                 </li>
                 <li>
                     <a href="#">Prestatori acreditați</a>
@@ -53,6 +57,16 @@
     </div>
 </header>
 
+    <svg class="checkbox-symbol">
+    <symbol id="check" viewbox="0 0 12 10">
+        <polyline
+        points="1.5 6 4.5 9 10.5 1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        ></polyline>
+    </symbol>
+</svg>
     <main>
         <section class="hero-section" style="background: url('img/hero.jpg') 50% 50% / cover no-repeat;">
             <div class="hero-section__container">
@@ -101,6 +115,230 @@
                         <h4>Point 4 - Denumire</h4>
                         <p>Unde animi dolores nihil et ullam. Eum eius quis omnis. Dolorem laborum veniam distinctio quasi consequatur eos. Consequuntur voluptas itaque nihil nemo voluptatum voluptatem ut blanditiis molestiae. Corrupti minus ut tempore aperiam numquam et. Tempora hic aliquid sequi.</p>
                     </div>
+                    <div class="timeline-body__item">
+                        <h4>Point 5 - Denumire</h4>
+                        <p>Unde animi dolores nihil et ullam. Eum eius quis omnis. Dolorem laborum veniam distinctio quasi consequatur eos. Consequuntur voluptas itaque nihil nemo voluptatum voluptatem ut blanditiis molestiae. Corrupti minus ut tempore aperiam numquam et. Tempora hic aliquid sequi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="apply">
+            <div class="apply__container">
+                <aside class="apply__sidebar">
+                    <h2 class="with-dot">Aplică acum</h2>
+                    <img src="img/apply-illustration.svg" alt="">
+                </aside>
+                <div class="apply__body">
+                    <form action="#">
+                        <label class="col-4 col-sm-12">
+                            Denumirea companiei <span>*</span>
+                            <input type="text" placeholder="Denumirea companiei" required>
+                        </label>
+                        <label class="col-4 col-sm-12">
+                            Denumire brand <span>*</span>
+                            <input type="text" placeholder="Denumire brand" required>
+                        </label>
+                        <label class="col-4 col-sm-12">
+                            Persoana de contact <span>*</span>
+                            <input type="text" placeholder="Persoana de contact" required>
+                        </label>
+
+                        <label class="col-3 col-md-12">
+                            Email <span>*</span>
+                            <input type="email" placeholder="example@gmail.com" required>
+                        </label>
+                        <label class="col-3 col-md-4 col-sm-12">
+                            Telefon <span>*</span>
+                            <input type="tel" placeholder="+(373) 00 000 000" required>
+                        </label>
+                        <label class="col-3 col-md-4 col-sm-12">
+                            Nr. de angajați <span>*</span>
+                            <input type="number" min="1" placeholder="Nr. de angajați" required>
+                        </label>
+                        <label class="col-3 col-md-4 col-sm-12">
+                            Cifra de afaceri <span>*</span>
+                            <select>
+                                <option value="" selected hidden>Selectați</option>
+                                <option value="9mil">până la 9 milioane MDL</option>
+                                <option value="25mil">până la 25 milioane MDL</option>
+                                <option value="50mil">până la 50 milioane MDL</option>
+                            </select>
+                        </label>
+
+                        <label class="col-12">
+                            Descrieti domeniu de activitate, produsele si serviciile companiei dvs <span>*</span>
+                            <textarea></textarea>
+                        </label>
+                        <label class="col-12">Descrieți capacitatile curente ce țin de comerț electronic (descrieți pe scurt procesele curente, includeți link-uri la website-ul companiei, rețele de socializare, link-uri la profil sau produse listate in magazine online terțe și de tip marketplace) <span>*</span>
+                            <textarea></textarea>
+                        </label>
+                        <label class="col-12">
+                            Descrieți pe scurt problema, care doriți să o rezolvați <span>*</span>
+                            <textarea></textarea>
+                        </label>
+                        <label class="col-12">
+                            Descrieți cum planificați să rezolvați problema?<span>*</span>
+                            <textarea></textarea>
+                        </label>
+                        <label class="col-12">
+                            Cum veti evalua succesul și care este rezultatul așteptat? Indicați principalii indicatori de performanță
+                            <textarea></textarea>
+                        </label>
+                        <label class="col-12">
+                            Evaluați ce resurse sunt necesare pentru a atinge rezultatele scontate. 
+                            <textarea></textarea>
+                        </label>
+                          
+                        <p class="col-12 button-block">
+                            <button type="submit" class="button button__dark">Trimite</button>
+                            <label class="checkbox-container col-12">
+                                <input class="checkbox-input" type="checkbox" />
+                                <span class="checkbox">
+                                  <span>
+                                    <svg width="12px" height="10px">
+                                      <use xlink:href="#check"></use>
+                                    </svg>
+                                  </span>
+                                  <span>Expediaza o copie a chestionarului pe adresa mea de email</span>
+                                </span>
+                            </label>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="mentors" >
+            <div class="mentors__container">
+                <div class="mentors__header">
+                    <h2 class="with-dot">Mentori</h2>
+                    <p>Rem delectus vero qui perspiciatis molestiae expedita inventore adipisci minima. Quis illum ut eveniet. Ducimus id velit aliquid consequatur. Sed adipisci illo iure vel ullam optio. Aperiam asperiores eaque modi.</p>
+                </div>
+                               
+                <div class="mentors__body mentors-body">
+                    <a href="#" class="mentors-body__item" style="background: url('img/mentor1.jpg') 50% 50% / cover no-repeat;">
+                        <h4>Erica Bergstrom</h4>
+                        <p>Legacy Intranet Architect</p>
+                    </a>
+                    <a href="#" class="mentors-body__item" style="background: url('img/mentor2.jpg') 50% 50% / cover no-repeat;">
+                        <h4>Diane Kessler</h4>
+                        <p>Global Intranet Analyst</p>
+                    </a>
+                    <a href="#" class="mentors-body__item" style="background: url('img/mentor3.jpg') 50% 50% / cover no-repeat;">
+                        <h4>Mrs. Geraldine Rogahn</h4>
+                        <p>Chief Mobility Strategist</p>
+                    </a>
+                    <a href="#" class="mentors-body__item" style="background: url('img/mentor4.jpg') 50% 50% / cover no-repeat;">
+                        <h4>Nettie Pollich</h4>
+                        <p>District Directives Engineer</p>
+                    </a>
+                    <a href="#" class="mentors-body__item mentors-body__item--mock" style="background: url('img/mock.jpg') 50% 50% / cover no-repeat;">
+                        <h4>Vezi toți mentorii</h4>
+                        <span class="icon-long__arrow"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="stories">
+            <div class="stories__container">
+                <div class="stories__header">
+                    <h2>Istorii de succes</h2>
+
+                    <div class="slider-stories-controls">
+                        <div class="slider-stories-controls__arrows slider-arrows">
+                            <button type="button" class="slider-arrow slider-arrow__prev icon-slider__arrow prev accent"></button>
+                            <button type="button" class="slider-arrow slider-arrow__next icon-slider__arrow next accent"></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="page__stories-slider stories-slider">
+                    <div class="stories-slider__body">
+                        <div class="stories-slider__slider">
+                            <div class="slider-stories__body swiper">
+                                <div class="slider-stories__slide">
+                                    <q>Est velit incidunt aut odit aspernatur. Ratione iure assumenda. Doloremque cum rerum a dolor facere. Hic et nesciunt debitis laudantium aliquid tempore dignissimos.</q>
+                                    <h4>Geneva Donnelly</h4>
+                                    <p>Regional Identity Technician</p>
+                                </div>
+                                <div class="slider-stories__slide">
+                                    <q>Ipsam consequatur aperiam nostrum vero minus necessitatibus. Laboriosam quasi animi quia et quasi. Qui recusandae et. Optio et sit voluptatum. Vitae nostrum commodi aperiam cupiditate est temporibus non. Repudiandae quam blanditiis sed mollitia non eveniet corporis.</q>
+                                    <h4>Rosemarie Koelpin</h4>
+                                    <p>Human Security Planner</p>
+                                </div>
+                                <div class="slider-stories__slide">
+                                    <q>Aliquid esse possimus ut nihil quasi suscipit rerum vel modi. Modi sed aut distinctio similique quis. Aut suscipit illum. Illum assumenda temporibus alias perspiciatis dolore tenetur nam</q>
+                                    <h4>Tara Sauer</h4>
+                                    <p>International Group Developer</p>
+                                </div>
+                                <div class="slider-stories__slide">
+                                    <q>Temporibus reiciendis et hic. Voluptate enim voluptatem quia consectetur. Aut corporis sed aspernatur amet. Debitis atque quod.</q>
+                                    <h4>Diane Rau</h4>
+                                    <p>Dynamic Implementation Executive</p>
+                                </div>
+                                <div class="slider-stories__slide">
+                                    <q>Ipsam consequatur aperiam nostrum vero minus necessitatibus. Laboriosam quasi animi quia et quasi. Qui recusandae et. Optio et sit voluptatum. Vitae nostrum commodi aperiam cupiditate est temporibus non. Repudiandae quam blanditiis sed mollitia non eveniet corporis.</q>
+                                    <h4>Tomas Hickle</h4>
+                                    <p>Investor Accounts Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="events">
+            <div class="events__container">
+                <div class="events__header">
+                    <h2 class="with-dot">Ultimile  evenimente</h2>
+                    <a href="#">Vezi toate <span class="icon-chevron__right"></span></a>
+                </div>
+
+                <div class="events__body events-body">
+                    <article class="events-body__article article">
+                        <a href="#">
+                            <img src="img/article.jpg" alt="">
+                        </a>
+
+                        <div class="article__content">
+                            <time datetime="2022-04-27">27 aprilie 2022</time>
+                            <p>Asperiores quia cum ab error vitae suscipit dolore quibusdam blanditiis.</p>
+                        </div>
+                    </article>
+                    <article class="events-body__article article">
+                        <a href="#">
+                            <img src="img/article.jpg" alt="">
+                        </a>
+
+                        <div class="article__content">
+                            <time datetime="2022-04-27">27 aprilie 2022</time>
+                            <p>Asperiores quia cum ab error vitae suscipit dolore quibusdam blanditiis.</p>
+                        </div>
+                    </article>
+                    <article class="events-body__article article">
+                        <a href="#">
+                            <img src="img/article.jpg" alt="">
+                        </a>
+
+                        <div class="article__content">
+                            <time datetime="2022-04-27">27 aprilie 2022</time>
+                            <p>Asperiores quia cum ab error vitae suscipit dolore quibusdam blanditiis.</p>
+                        </div>
+                    </article>
+                    <article class="events-body__article article">
+                        <a href="#">
+                            <img src="img/article.jpg" alt="">
+                        </a>
+
+                        <div class="article__content">
+                            <time datetime="2022-04-27">27 aprilie 2022</time>
+                            <p>Asperiores quia cum ab error vis.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -127,6 +365,7 @@
 </footer>
 
 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
 </body>
 

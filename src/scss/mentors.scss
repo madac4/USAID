@@ -1,8 +1,4 @@
 .mentors-grid {
-    &__container {
-        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-        grid-gap: 20px;
-    }
     .mentors-item {
         position: relative;
         height: 340px;

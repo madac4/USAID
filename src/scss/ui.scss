@@ -527,6 +527,9 @@ form {
     @include adaptiv-value('margin-top', 100, 60, 1);
     @include adaptiv-value('margin-bottom', 50, 30, 1);
     text-align: center;
+    strong {
+        text-transform: uppercase;
+    }
     h2 {
         display: inline-block;
         margin-bottom: 10px;
@@ -545,4 +548,11 @@ form {
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.main-grid {
+    &__container {
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-gap: 20px;
+    }
 }

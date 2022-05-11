@@ -4,11 +4,9 @@
         height: 340px;
         overflow: hidden;
         color: #fff;
-        @media (any-hover: hover) {
-            &:hover {
-                .mentors-item__overlay {
-                    top: 0;
-                }
+        &:hover {
+            .mentors-item__overlay {
+                top: 0;
             }
         }
         &::after {

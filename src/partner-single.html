@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./components/head.html', {'title': 'Parteneri'})
+
+<body>
+    @@include('./components/header.html')
+    <main>
+        <div class="single-navigation">
+            <div class="single-navigation__container">
+                <a href="#" class="button button__navigation"><span class="icon-back"></span>Înapoi la lista partenerilor</a>
+                <div class="single-navigation__way">
+                    <a href="#" class="button button__outline disabled">Precedent</a>
+                    <a href="#" class="button button__outline">Următor</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- single-content--article -->
+        <div class="single-content">
+            <div class="single-content__container">
+                <div class="single-content__header">
+                    <img src="@img/logos/partner.png" alt="">
+                    <h2>excepturi laborum deserunt</h2>
+                </div>
+                
+                <div class="single-content__body">
+                    <p>Ea voluptatum aut temporibus est dolorum provident aut. Id vitae reprehenderit et quod atque aliquam sit aut. Praesentium ipsa nihil ut et a amet odio. Quaerat impedit aut repellendus nobis dolor autem suscipit tempora voluptatem. Dolores modi libero dolor. Dolorum voluptates aliquid repudiandae expedita. </p>
+                    <p>Non distinctio mollitia. Commodi occaecati et dolores nostrum aut. Eos ea quia numquam quia corrupti. Voluptatem dolor culpa molestiae suscipit iusto qui. Assumenda voluptas vero vel cum corrupti id dolorem. Cumque vel aut.</p>
+                    <p>Repellendus est aliquid id. Quo reiciendis aut sunt dolores iusto. Vitae qui necessitatibus quis omnis officia adipisci inventore nemo. Ea dicta at neque repudiandae nihil qui qui ut voluptatum. Incidunt natus est exercitationem repudiandae dolores repudiandae dolores voluptatum.</p>
+                    <p>Eos similique dolorem eum beatae dolores dolores. Nesciunt maxime iusto repellat. Enim magni dolorem fugit cum id asperiores ex libero quia. Est voluptatem eum vel aperiam. Et quis ut quas quisquam rerum autem eum. Quia minima voluptates est ut voluptas adipisci.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="single-slider">
+            <div class="single-slider__container">
+                @@include('./components/partnerSlider.html')
+            </div>
+        </div>
+        
+        @@include('./components/banner.html')
+    </main>
+    @@include('./components/footer.html')
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

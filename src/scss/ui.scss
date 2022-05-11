@@ -118,9 +118,12 @@ section {
     &__navigation {
         padding: 15px 30px;
         background-color: $lightcolor200;
+        display: flex;
+        align-items: center;
+        gap: 10px;
         &:hover {
             span {
-                transform: translateX(-5px);
+                transform: translateY(-2px) translateX(-5px);
             }
         }
         &:active {
@@ -129,6 +132,7 @@ section {
         span {
             transition: 0.3s;
             font-size: 24px;
+            transform: translateY(-2px);
         }
     }
     &__outline {
@@ -586,4 +590,11 @@ form {
         height: 100%;
         margin-bottom: 20px;
     }
+}
+
+time {
+    display: block;
+    font-size: 14px;
+    color: #cfcfcf;
+    text-transform: uppercase;
 }

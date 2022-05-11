@@ -179,6 +179,34 @@
             </div>
         </section>
 
+        <div class="logos">
+            <div class="logos__container">
+                <div class="logos-tabs tabs">
+                    <div class="tabs__header">
+                        <ul class="tabs__list">
+                            <li class="tabs__item">
+                                <button class="tabs__button tabs__button--active" data-tabs-path="tab-first">Prestatori acreditati</button>
+                            </li>
+                            <li class="tabs__item">
+                                <button class="tabs__button" data-tabs-path="tab-second">parteneri</button>
+                            </li>
+                        </ul>
+
+                        <a href="#">Vezi toți prestatorii <span class="icon-chevron__right"></span></a>
+                    </div>
+                    
+                
+                    <div class="tabs__content tabs__content--active" data-tabs-target="tab-first">
+                        @@include('./components/partnerSlider.html')
+                    </div>
+                    <div class="tabs__content" data-tabs-target="tab-second">
+                        s
+                        @@include('./components/partnerSlider.html')
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section class="stories">
             <div class="stories__container">
                 <div class="stories__header">

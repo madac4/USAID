@@ -107,8 +107,12 @@ $mobileSmall: rem(479.98px);
 @import 'components/footer.scss';
 @import 'components/header.scss';
 @import 'components/banner.scss';
+@import 'components/slider.scss';
 // Conectarea stilurilor pentru pagini
 @import 'home';
 @import 'mentors';
 @import 'partners';
 @import 'about';
+@import 'blog';
+@import 'story-single';
+@import 'partner-single';

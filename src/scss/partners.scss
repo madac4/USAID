@@ -1,14 +1,11 @@
 .partners-grid {
     .partners-item {
-        padding: 30px;
+        @include adaptiv-value('padding', 30, 18, 1);
         background-color: $lightcolor;
         text-align: center;
         position: relative;
         transition: 0.3s;
         width: 100%;
-        &--prestator {
-            height: fit-content;
-        }
         &:hover {
             background-color: darken($color: $lightcolor, $amount: 8);
             img {
@@ -49,6 +46,7 @@
                 @include adaptiv-value('margin-top', 20, 10, 1);
                 li {
                     list-style-type: disc;
+                    @include adaptiv-value('font-size', 16, 14, 1);
                     &:not(:last-child) {
                         @include adaptiv-value('margin-bottom', 20, 10, 1);
                     }

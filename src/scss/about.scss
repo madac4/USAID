@@ -1,0 +1,90 @@
+.about-content {
+    &__image {
+        @include adaptiv-value('margin-bottom', 100, 60, 1);
+        img {
+            width: 100%;
+            @include adaptiv-value('height', 300, 120, 1);
+        }
+    }
+    &__text {
+        @include adaptiv-value('margin-bottom', 100, 60, 1);
+        text-align: center;
+        p {
+            color: $textgray;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .about-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptiv-value('margin-bottom', 100, 60, 1);
+        gap: 30px;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+        img {
+            @include adaptiv-value('max-width', 460, 280, 1);
+            @include adaptiv-value('height', 460, 280, 1);
+            width: 100%;
+            object-fit: cover;
+            @media (max-width: $mobile) {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        &__description {
+            h3 {
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+            p {
+                color: $textgray;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .donatori {
+        @include adaptiv-value('margin-bottom', 80, 40, 1);
+        &__header {
+            text-align: center;
+            margin-bottom: 20px;
+            h2 {
+                display: inline-block;
+            }
+        }
+        &-body {
+            &__item {
+                background-color: $lightcolor;
+                text-align: center;
+                transition: 0.3s;
+                @include adaptiv-value('padding', 30, 18, 1);
+                &:hover {
+                    background-color: darken($color: $lightcolor, $amount: 8);
+                    img {
+                        mix-blend-mode: normal;
+                    }
+                }
+                img {
+                    mix-blend-mode: luminosity;
+                }
+                h5 {
+                    @include adaptiv-value('margin-top', 30, 20, 1);
+                    margin-bottom: 10px;
+                }
+                p {
+                }
+            }
+        }
+    }
+}

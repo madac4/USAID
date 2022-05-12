@@ -4,6 +4,7 @@ flsFunctions.isWebp();
 flsFunctions.sliders();
 
 document.addEventListener('DOMContentLoaded', () =>{
+    AOS.init();
     const burger = document.querySelector('.burger');
     const header = document.querySelector('.header');
     const menu = document.querySelector('.header-nav');

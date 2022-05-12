@@ -197,6 +197,7 @@ button {
   cursor: pointer;
   background-color: transparent;
   border: none;
+  color: #232323;
 }
 
 button,
@@ -1085,6 +1086,16 @@ time {
 .header {
   padding: 20px 0;
   background-color: #000;
+}
+.header.no-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: transparent;
+}
+.header.no-background .header-nav__list li a {
+  color: #232323;
 }
 .header__container {
   justify-content: space-between;
@@ -2360,6 +2371,44 @@ time {
   .blog-articles .blog-body .blog-article__content p {
     font-size: calc(
                 14px + 2 * ((100vw - 320px) / 1100)
+            );
+  }
+}
+
+.not-found {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.not-found__body {
+  padding-left: 100px;
+}
+@media (max-width: 1420px) {
+  .not-found__body {
+    padding-left: calc(
+                15px + 85 * ((100vw - 320px) / 1100)
+            );
+  }
+}
+.not-found__body p {
+  font-size: 24px;
+  color: #4a5865;
+  max-width: 650px;
+}
+@media (max-width: 1420px) {
+  .not-found__body p {
+    font-size: calc(
+                16px + 8 * ((100vw - 320px) / 1100)
+            );
+  }
+}
+.not-found__body a {
+  margin-top: 50px;
+}
+@media (max-width: 1420px) {
+  .not-found__body a {
+    margin-top: calc(
+                30px + 20 * ((100vw - 320px) / 1100)
             );
   }
 }

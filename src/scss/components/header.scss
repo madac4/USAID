@@ -1,6 +1,22 @@
 .header {
     padding: 20px 0;
     background-color: #000;
+    &.no-background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: transparent;
+        .header-nav {
+            &__list {
+                li {
+                    a {
+                        color: $maincolor;
+                    }
+                }
+            }
+        }
+    }
     &__container {
         justify-content: space-between;
         @media (max-width: $mobile) {

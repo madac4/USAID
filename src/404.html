@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./components/head.html', {'title': 'Despre Noi'})
+
+<body>
+    @@include('./components/404header.html')
+    <main>
+        <div class="not-found" style="background: url('@img/404.svg') 50% 50% / cover no-repeat;">
+            <div class="not-found__body">
+                <h1>Ups, pagina lipsă</h1>
+                <p>Se pare că această pagină nu a fost găsită. Probabil a fost redenumită
+                    sau mutată pe altă adresă.</p>
+
+                <a href="/" class="button button__dark">Spre pagina principală</a>
+            </div>
+        </div>
+    </main>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

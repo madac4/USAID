@@ -168,16 +168,24 @@
             }
         }
     }
-    &__body {
+    &-body {
+        position: relative;
         form {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-gap: 50px 30px;
+            height: 460px;
+            overflow: hidden;
             @media (max-width: 1200px) {
                 grid-gap: 40px 20px;
             }
             @media (max-width: $mobileMedium) {
                 grid-gap: 20px 10px;
+                height: 490px;
+            }
+            @media (max-width: $mobileSmall) {
+                grid-gap: 20px 10px;
+                height: 540px;
             }
 
             .button-block {
@@ -188,6 +196,19 @@
                     flex-direction: column-reverse;
                     align-items: flex-start;
                 }
+            }
+        }
+        &__hide {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            background: $maincolor;
+            padding: 10px 0;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            span {
+                font-size: 36px;
             }
         }
     }
@@ -405,5 +426,70 @@
                 }
             }
         }
+    }
+}
+
+.slider-mentors-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.slider-mentors-controls__arrows {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    .swiper-button-disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.confirmation {
+    position: fixed;
+    bottom: -100%;
+    z-index: 10;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    background-color: $maincolor;
+    justify-content: space-between;
+    gap: 20px;
+    transition: 0.3s;
+    &.open {
+        bottom: 0;
+    }
+    @media (max-width: $mobileMedium) {
+        flex-direction: column;
+    }
+    &__content {
+        font-size: 14px;
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        p {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+    }
+    &__button {
+        max-width: 220px;
+    }
+}
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    &.active {
+        opacity: 1;
+        visibility: visible;
     }
 }

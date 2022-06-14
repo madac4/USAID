@@ -598,3 +598,10 @@ time {
     color: #cfcfcf;
     text-transform: uppercase;
 }
+
+.tabs__link {
+    display: none;
+    &--active {
+        display: block;
+    }
+}

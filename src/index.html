@@ -11,12 +11,12 @@
                 <div class="hero-section__body" data-aos="fade">
                     <h1>Program de accelerare a comerțului electronic pentru producatorii <span>mici</span> si <span>mijlocii</span></h1>
                     <p class="big">Dezlănțuiește adevăratul potential al afacerii tale prin digitalizare, învață de la cei mai buni și obține finanțare pentru evoluția digitală a afacerii tale </p>
-                    <a href="#" class="button button__light">Aplică</a>
+                    <button data-scroll="apply" class="button button__light">Aplică</button>
                 </div>
             </div>
         </section>
 
-        <section class="who-section">
+        <section class="who-section" data-scroll="who">
             <div class="who-section__container">
                 <div class="who-section__content" data-aos="fade-right" data-aos-duration="1000">
                     <h2 class="with-dot">Cine poate beneficia?</h2>
@@ -30,7 +30,7 @@
             </div>
         </section>
 
-        <section class="timeline" style="background: url('@img/timeline.jpg') 50% 50% / cover no-repeat;">
+        <section data-scroll="timeline" class="timeline" style="background: url('@img/timeline.jpg') 50% 50% / cover no-repeat;">
             <div class="timeline__container">
                 <div class="timeline__header" data-aos="fade-up" data-aos-duration="1000">
                     <h2>Timeline header text</h2>
@@ -61,38 +61,38 @@
             </div>
         </section>
 
-        <section class="apply">
+        <section class="apply" data-scroll="apply">
             <div class="apply__container">
                 <aside class="apply__sidebar">
                     <h2 class="with-dot">Aplică acum</h2>
                     <img src="@img/apply-illustration.svg" alt="">
                 </aside>
-                <div class="apply__body">
-                    <form action="#">
+                <div class="apply__body apply-body">
+                    <form action="#" method="GET">
                         <label class="col-4 col-sm-12">
                             Denumirea companiei <span>*</span>
-                            <input type="text" placeholder="Denumirea companiei" required>
+                            <input type="text" placeholder="Denumirea companiei" >
                         </label>
                         <label class="col-4 col-sm-12">
                             Denumire brand <span>*</span>
-                            <input type="text" placeholder="Denumire brand" required>
+                            <input type="text" placeholder="Denumire brand" >
                         </label>
                         <label class="col-4 col-sm-12">
                             Persoana de contact <span>*</span>
-                            <input type="text" placeholder="Persoana de contact" required>
+                            <input type="text" placeholder="Persoana de contact" >
                         </label>
 
                         <label class="col-3 col-md-12">
                             Email <span>*</span>
-                            <input type="email" placeholder="example@gmail.com" required>
+                            <input type="email" placeholder="example@gmail.com" >
                         </label>
                         <label class="col-3 col-md-4 col-sm-12">
                             Telefon <span>*</span>
-                            <input type="tel" placeholder="+(373) 00 000 000" required>
+                            <input type="tel" placeholder="+(373) 00 000 000" >
                         </label>
                         <label class="col-3 col-md-4 col-sm-12">
                             Nr. de angajați <span>*</span>
-                            <input type="number" min="1" placeholder="Nr. de angajați" required>
+                            <input type="number" min="1" placeholder="Nr. de angajați" >
                         </label>
                         <label class="col-3 col-md-4 col-sm-12">
                             Cifra de afaceri <span>*</span>
@@ -129,7 +129,7 @@
                         </label>
                           
                         <p class="col-12 button-block">
-                            <button type="submit" class="button button__dark">Trimite</button>
+                            <button type="button" class="button button__dark">Trimite</button>
                             <label class="checkbox-container col-12">
                                 <input class="checkbox-input" type="checkbox" />
                                 <span class="checkbox">
@@ -143,11 +143,14 @@
                             </label>
                         </p>
                     </form>
+                    <div class="apply-body__hide">
+                        <span class="icon-chevron__down"></span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="mentors" >
+        <section class="mentors" data-scroll="mentors">
             <div class="mentors__container">
                 <div class="mentors__header" data-aos="fade-up" data-aos-duration="1000">
                     <h2 class="with-dot">Mentori</h2>
@@ -155,26 +158,27 @@
                 </div>
                                
                 <div class="mentors__body mentors-body">
-                    <a data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" href="#" class="mentors-body__item" style="background: url('@img/mentor1.jpg') 50% 50% / cover no-repeat;">
-                        <h4>Erica Bergstrom</h4>
-                        <p>Legacy Intranet Architect</p>
-                    </a>
-                    <a data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" href="#" class="mentors-body__item" style="background: url('@img/mentor2.jpg') 50% 50% / cover no-repeat;">
-                        <h4>Diane Kessler</h4>
-                        <p>Global Intranet Analyst</p>
-                    </a>
-                    <a data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" href="#" class="mentors-body__item" style="background: url('@img/mentor3.jpg') 50% 50% / cover no-repeat;">
-                        <h4>Mrs. Geraldine Rogahn</h4>
-                        <p>Chief Mobility Strategist</p>
-                    </a>
-                    <a data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" href="#" class="mentors-body__item" style="background: url('@img/mentor4.jpg') 50% 50% / cover no-repeat;">
-                        <h4>Nettie Pollich</h4>
-                        <p>District Directives Engineer</p>
-                    </a>
-                    <a data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" href="#" class="mentors-body__item mentors-body__item--mock" style="background: url('@img/mock.jpg') 50% 50% / cover no-repeat;">
-                        <h4>Vezi toți mentorii</h4>
-                        <span class="icon-long__arrow"></span>
-                    </a>
+                    <div class="page__mentors-slider mentors-slider">
+                        <div class="mentors-slider__body">
+                            <div class="mentors-slider__slider">
+                                <div class="slider-mentors__body swiper">
+                                    <div class="slider-mentors__slide">
+                                        <a href="#" class="mentors-body__item" style="background: url('@img/mentor1.jpg') 50% 50% / cover no-repeat;">
+                                            <h4>Erica Bergstrom</h4>
+                                            <p>Legacy Intranet Architect</p>
+                                        </a>
+                                    </div>
+                                </div>
+                    
+                                <div class="slider-mentors-controls">
+                                    <div class="slider-mentors-controls__arrows slider-arrows">
+                                        <button type="button" class="slider-arrow slider-arrow__prev icon-slider__arrow prev"></button>
+                                        <button type="button" class="slider-arrow slider-arrow__next icon-slider__arrow next"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -192,7 +196,12 @@
                             </li>
                         </ul>
 
-                        <a href="#">Vezi toți prestatorii <span class="icon-chevron__right"></span></a>
+                        <div class="tabs__link tabs__link--active" data-tabs-target="tab-first">
+                            <a href="#">Vezi toți prestatorii <span class="icon-chevron__right"></span></a>
+                        </div>
+                        <div class="tabs__link" data-tabs-target="tab-second">
+                            <a href="#">Vezi toți partenerii <span class="icon-chevron__right"></span></a>
+                        </div>
                     </div>
                     
                 
@@ -308,9 +317,27 @@
                 </div>
             </div>
         </section>
+
+        <div class="overlay"></div>
+        <div class="confirmation">
+            <div class="confirmation__content">
+                <p>Utilizăm responsabil datele tale personale</p>
+                <p>
+                    Noi și partenerii noștri preluăm, procesăm și utilizăm datele tale personale, utilizând diverse tehnologii inclusiv “cookies” – ce sunt păstrate pe dispozitivul de pe care accesezi acest site pentru a livra conținut și publicitate personalizată, măsura impactul programului și a campaniilor de comunicare, primi date care ne permit să îmbunătățim experiența de utilizator, dar și pentru a identifica oameni similari ce ar putea beneficia de acest program.  
+                </p>
+                <p>
+                    Completarea formularelor pe acest site este benevolă și exprimă dorința vizitatorului de a beneficia de componentele programului. Datele cu caracter personal acumulate în urma completării formularului vor fi utilizate strict în vederea asistentei celor, ce au aplicat, nu vor fi partajate cu terțe persoane, ce nu sunt implicate în implementarea Progamului și vor fi păstrate securizat. 
+                </p>
+                <a href="#">
+                    Vezi detalii in Politica de Confidențialitate.
+                </a>
+            </div>
+            <button type="button" class="confirmation__button button button__light">Accept</button>
+        </div>
     </main>
     @@include('./components/footer.html')
 
+    <script src="js/sweet.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
 </body>

@@ -25,11 +25,14 @@ export function burger(burger, menu, header) {
 }
 
 export function fixedHeader(header) {
+    const main  = document.querySelector('main');
     window.addEventListener('scroll', () =>{
         const scrollPos = window.scrollY;
         if (scrollPos > header.offsetHeight + 30) {
+            main.style.marginTop = `${header.offsetHeight}px`;
             header.classList.add('sticky')
         }else{
+            main.style.marginTop = null;
             header.classList.remove('sticky')
         }
     })

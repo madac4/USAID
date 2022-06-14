@@ -13,63 +13,16 @@ document.addEventListener('DOMContentLoaded', () =>{
         flsFunctions.fixedHeader(header)
     }
 
-    if (document.querySelector('.slider-stories__body')) {
-        // new Swiper('.slider', {
-        //     // effect: 'fade',
-        //     // autoplay:{
-        //     //     delay: 3000,
-        //     //     disableOnInteraction: false,
-        //     // }
-    
-        //     observer: true,
-        //     observeParents: true,
-        //     slidesPerView: 1,
-        //     spaceBetween: 0,
-        //     autoHeight: true,
-        //     speed: 800,
-        //     // touchRatio: 0,
-        //     // simulateTouch: false,
-        //     // loop: true,
-        //     // preloadImages: false,
-        //     // lazy: true,
-        //     // pagination: {
-        //     //     el: '.slider-pagging',
-        //     //     clickable: true,
-        //     // },
-        //     navigation:{
-        //         nextEl: '.swiper-next',
-        //         prevEl: '.swiper-prev',
-        //     },
-    
-        //     // breakpoints: {
-        //     //     320: {
-        //     //         slidesPerView: 1,
-        //     //         spaceBetween: 0,
-        //     //         autoHeight: true,
-        //     //     },
-        //     //     768: {
-        //     //         slidesPerView: 2,
-        //     //         spaceBetween: 20,
-        //     //     },
-        //     //     992: {
-        //     //         slidesPerView: 3,
-        //     //         spaceBetween: 20,
-        //     //     },
-        //     //     1268: {
-        //     //         slidesPerView: 4,
-        //     //         spaceBetween: 30,
-        //     //     },
-        //     // },
-        //     on: {
-        //         lazyImageReady: function () {
-        //             ibg();
-        //         },
-        //     },
-        //     scrollbar: {
-        //         el: '.swiper-scrollbar',
-        //     }
-        // })
+    const currentLang = document.querySelector('.header-languages__current');
+    const languagesDropdown = document.querySelector('.header-languages__dropdown');
 
+    if (currentLang && languagesDropdown) {
+        currentLang.addEventListener('click', () =>{
+            languagesDropdown.classList.toggle('open')
+        })
+    }
+
+    if (document.querySelector('.slider-stories__body')) {
         new Swiper('.slider-stories__body', {
             autoplay:{
                 delay: 5000,
@@ -82,41 +35,48 @@ document.addEventListener('DOMContentLoaded', () =>{
             autoHeight: true,
             speed: 800,
             freeMode: true,
-            // touchRatio: 0,
-            // simulateTouch: false,
             loop: true,
-            // preloadImages: false,
             navigation:{
                 nextEl: '.slider-stories-controls__arrows .slider-arrow.slider-arrow__next',
                 prevEl: '.slider-stories-controls__arrows .slider-arrow.slider-arrow__prev',
             },
-            // breakpoints: {
-            //     320: {
-            //         slidesPerView: 1,
-            //         spaceBetween: 0,
-            //         autoHeight: true,
-            //     },
-            //     768: {
-            //         slidesPerView: 2,
-            //         spaceBetween: 20,
-            //     },
-            //     992: {
-            //         slidesPerView: 3,
-            //         spaceBetween: 20,
-            //     },
-            //     1268: {
-            //         slidesPerView: 4,
-            //         spaceBetween: 30,
-            //     },
-            // },
-            on: {
-                lazyImageReady: function () {
-                    ibg();
+        })
+    }
+
+    if (document.querySelector('.slider-mentors__body')) {
+        new Swiper('.slider-mentors__body', {
+            autoplay:{
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            observer: true,
+            observeParents: true,
+            slidesPerView: 5,
+            spaceBetween: 20,
+            autoHeight: true,
+            speed: 800,
+            freeMode: true,
+            navigation:{
+                nextEl: '.slider-mentors-controls__arrows .slider-arrow.slider-arrow__next',
+                prevEl: '.slider-mentors-controls__arrows .slider-arrow.slider-arrow__prev',
+            },
+            breakpoints: {
+                320:{
+                    slidesPerView: 1,
+                },
+                480:{
+                    slidesPerView: 2,
+                },
+                740:{
+                    slidesPerView: 3,
+                },
+                992: {
+                    slidesPerView: 4,
+                },
+                1180: {
+                    slidesPerView: 5,
                 },
             },
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            }
         })
     }
 
@@ -132,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () =>{
                 observer: true,
                 observeParents: true,
                 speed: 800,
-                // spaceBetween: 20,
                 preloadImages: false,
                 slidesPerView: 5,
                 lazy: true,
@@ -162,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const tabs = document.querySelector('.tabs');
     const tabsButtons = document.querySelectorAll('.tabs__button');
     const tabsContents = document.querySelectorAll('.tabs__content');
+    const tabsLinks = document.querySelectorAll('.tabs__link');
     
     if (tabs) {
         tabs.addEventListener('click', (e) => {
@@ -181,6 +141,75 @@ document.addEventListener('DOMContentLoaded', () =>{
         tabsContents.forEach(content => {
             content.classList.remove('tabs__content--active')
         })
-        document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
+        document.querySelector(`.tabs__content[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
+
+        tabsLinks.forEach(link => {
+            link.classList.remove('tabs__link--active')
+        })
+        document.querySelector(`.tabs__link[data-tabs-target="${path}"]`).classList.add('tabs__link--active');
+    }
+
+    const checkMocks = document.querySelectorAll('.with-mock article');
+
+    if(checkMocks.length < 4 && checkMocks.length > 0){
+        for(let i = checkMocks.length; i <= 4; i++){
+            console.log(i)
+            document.querySelector('.with-mock').append(document.createElement('article'))
+        }
+    }
+
+    const menuItems = document.querySelectorAll('button[data-scroll]');
+    const scrollSections = document.querySelectorAll('section[data-scroll]');
+    if (menuItems && scrollSections) {
+        menuItems.forEach(button =>{
+            scrollSections.forEach(section =>{
+                button.addEventListener('click', () =>{
+                    burger.classList.remove('active');
+                    menu.classList.remove('active');
+                    document.body.classList.remove('lock');
+                    if (button.dataset.scroll === section.dataset.scroll) {
+                        const pos = section.offsetTop;
+                        window.scrollTo({
+                            top: pos - 180,
+                            left:0,
+                            behavior: 'smooth'
+                        })
+                    }
+                })
+            })
+        })
+    }
+
+    const openForm = document.querySelector('.apply-body__hide');
+    const applyForm = document.querySelector('.apply-body form');
+    const acceptButton = document.querySelector('.confirmation__button');
+    const overlay = document.querySelector('.overlay');
+    const submitButton = applyForm.querySelector('button');
+    const confirmation = document.querySelector('.confirmation');
+
+    if (openForm && applyForm) {
+        openForm.addEventListener('click', () =>{
+            applyForm.style.height = '100%';
+            openForm.style.display = 'none'
+        })
+
+        if (localStorage.getItem('confirmation')) {
+            submitButton.setAttribute('type', 'submit');
+        }
+        
+        submitButton.addEventListener('click', () =>{
+            if (submitButton.getAttribute('type') !== 'submit' || !localStorage.getItem('confirmation')) {
+                overlay.classList.add('active')
+                confirmation.classList.add('open')
+            }
+        })
+        acceptButton.addEventListener('click', () =>{
+            overlay.classList.remove('active')
+            confirmation.classList.remove('open');
+            submitButton.setAttribute('type', 'submit');
+            localStorage.setItem('confirmation', 'accept')
+        })
     }
 })
+
+
